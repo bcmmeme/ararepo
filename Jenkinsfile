@@ -1,9 +1,15 @@
-node {
+
+pipeline {
+ agent none
  
- stage('Start') {
-  sh '''
-   sudo /home1/irteam/tomcat/bin/startup.sh
-  '''
- }
-  
+ stages { 
+  stage('start') { 
+   steps { 
+      sh '''
+       sudo /home1/irteam/tomcat/bin/startup.sh
+      '''
+   } 
+  } 
+ } 
+ 
 }
