@@ -1,7 +1,7 @@
 node {
  
  stage('Start') {
-  sh "/home1/irteam/tomcat/bin/startup.sh"
+  sh "sudo /home1/irteam/tomcat/bin/startup.sh"
  }
   
 }
