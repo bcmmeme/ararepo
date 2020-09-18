@@ -1,13 +1,13 @@
 node {
 
   stage('test1') {
-    build job : 'test-1'
+    build job : 'test1'
     }
   stage('test2') {
-    build job : 'test-2'
+    build job : 'test2'
     }    
   stage('test3') {
-    build job : 'test-3'
+    build job : 'test3'
     }    
     
 }
