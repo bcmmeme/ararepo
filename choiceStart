@@ -1,0 +1,19 @@
+
+node {
+  
+  properties([parameters([choice(choices: ['test-1', 'test-2', 'test-3'], description: '수행할 작업을 선택하세요.', name: 'run')])])
+  
+ stage('test') {
+  
+  if ( run == 'test-1' ) {
+      build job : 'test1'
+      
+  } else if ( run == 'test-2' ) {
+      build job : 'test2'
+  
+  } else if ( run == 'test-3' ) {
+      build job : 'test3'
+  
+  }
+ }
+} 
