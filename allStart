@@ -1,14 +1,17 @@
-node {
+pipeline {
+    agent none
+    stages{
+        stage('All Test') {
 
-    stage('All Test') {
                 stage('Build-test-1') {
-                    step{ build 'test-1' }
+                    steps{ build 'test-1' }
                 }
                 stage('Build-test-2') {
-                    step{ build 'test-2' }
+                    steps{ build 'test-2' }
                 }
                 stage('Build-test-3') {
-                    step{ build 'test-3' }
+                    steps{ build 'test-3' }
                 }
             }
         }
+    }
